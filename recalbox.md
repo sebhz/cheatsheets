@@ -25,16 +25,16 @@ Specific shortcuts
     * Add a credit: Select
 
 ## Invoking a virtual keyboard in emulator (retroarch-based)
-Start + Y, then press Select to switch to "Mouse mode"
+`Start+Y`, then press `Select` to switch to "Mouse mode"
 
-Move with the arrows, type with B.
+Move with the arrows, type with `B`.
 
 ## Pad-to-key
 See https://recalbox.gitbook.io/documentation/v/francais/utilisateur-avance/configurations/pad-to-keyboard.
 
-Place a .p2k.cfg file in your rom dir (for global map).
+Place a `.p2k.cfg` file in your rom dir (for global map).
 
-Can be overridden by <rom_name>.p2k.cfg
+Can be overridden by `<rom_name>.p2k.cfg`
 
 Basic example (works great with Amstrad CPC for a majority of games):
 
@@ -63,9 +63,7 @@ Basic example (works great with Amstrad CPC for a majority of games):
 ### Specific games
 
 #### Barbarian
-    * Press enter to switch mode (Demo, 1 player joystick, 1 player keyboard, 2 players)
-    * Press space to start playing.
-    * Press Enter until MODE1 (1P joystick) or MODE2 (1P keyboard) or MODE3 (2P) appears, then Space to launch game.
+Press `Enter` until MODE1 (1P joystick) or MODE2 (1P keyboard) or MODE3 (2P) appears, then `Space` to launch game.
 
 #### Prince of Persia
 To jump, use high diagonal.
