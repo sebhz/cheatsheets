@@ -11,18 +11,19 @@ See https://recalbox.gitbook.io/documentation/basic-manual/getting-started/durin
 
 Specific shortcuts
 
-    * Screenshot: Hotkey + L1
-    * Save state to current slot: Hotkey + Y
-    * Load state from current slot: Hotkey + X
-    * Select previous slot: Hotkey + Up
-    * Select next slot: Hotkey + Down
-    * Exit an emulator: Hotkey + Start
-    * Reset emulator: Hotkey + A
-    * Get retroarch menu: Hotkey + B (then select with B).
-    * Speed up an emulator: Hotkey + Right
-    * Rewind: Hotkey + Left
-
-    * Add a credit: Select
+| Function                     | Shortcut       |
+| ---                          | ---            |
+| Screenshot                   | Hotkey + L1    |
+| Save state to current slot   | Hotkey + Y     |
+| Load state from current slot | Hotkey + X     |
+| Select previous slot         | Hotkey + Up    |
+| Select next slot             | Hotkey + Down  |
+| Exit an emulator             | Hotkey + Start |
+| Reset emulator               | Hotkey + A     |
+| Get retroarch menu           | Hotkey + B     |
+| Speed up an emulator         | Hotkey + Right |
+| Rewind                       | Hotkey + Left  |
+| Add a credit (Arcade)        | Select         |
 
 ## Invoking a virtual keyboard in emulator (retroarch-based)
 `Start+Y`, then press `Select` to switch to "Mouse mode"
