@@ -1,4 +1,5 @@
 # Recalbox general
+Valid for Recalbox 7.0.x
 
 ## Standard buttons layout
 ```
