@@ -38,7 +38,7 @@ GDM looks for sessions in `/usr/share/xsessions`. Those are `.desktop` files.
 A session file can either launch a good old X session or a real session manager like gnome-session
 
 #### launch a good old X session with GDM
-Add a good_old_xinit.desktop file in /usr/share/xsessions
+Add a `good_old_xinit.desktop` file in `/usr/share/xsessions`:
 
 ```
 [Desktop Entry]
@@ -63,4 +63,4 @@ done
 The `Good old X session` should now be available in GDM login screen.
 
 ### XDM
-XDM sources ~/.xsession and populates whatever clients you want in ~/.xsession or ~/.Xclients
+XDM sources `~/.xsession`. So populate whatever clients you want in `~/.xsession` or `~/.Xclients`
