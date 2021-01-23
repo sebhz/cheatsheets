@@ -4,10 +4,12 @@ Seems to work fine in Ubuntu 16.04, 18.04 and 20.04 (GDM3)
 ## Login process
 
 display manager (GDM, KDM, LightDM,...):
+
     - launches X server
     - manages a graphical login screen
 
 session manager:
+
     - manages session for the logged-in user
     - launches the clients required by the user
     - manages crashes and stops, and generally user session state.
@@ -62,4 +64,3 @@ The `Good old X session` should now be available in GDM login screen.
 
 ### XDM
 XDM sources ~/.xsession and populates whatever clients you want in ~/.xsession or ~/.Xclients
-
