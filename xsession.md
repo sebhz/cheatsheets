@@ -33,11 +33,12 @@ init -> getty/login (=display manager) -> shell -> startx/xinit -> X clients
 ```
 
 ## Display manager configuration
+
 ### GDM
-GDM looks for sessions in `/usr/share/xsessions`. Those are `.desktop` files.
+GDM looks for sessions in `/usr/share/xsessions`. Those are Freedesktop (a.k.a X dev group, or xdg) `.desktop` files.
 A session file can either launch a good old X session or a real session manager like gnome-session
 
-#### launch a good old X session with GDM
+#### Launch a good old X session with GDM
 Add a `good_old_xinit.desktop` file in `/usr/share/xsessions`:
 
 ```
@@ -63,4 +64,23 @@ done
 The `Good old X session` should now be available in GDM login screen.
 
 ### XDM
-XDM sources `~/.xsession`. So populate whatever clients you want in `~/.xsession` or `~/.Xclients`
+XDM sources `~/.xsession`. So populate whatever clients you want in `~/.xsession` or `~/.Xclients`.
+
+## Starting default clients
+You can either:
+
+- add all your clients in the `.xsession` file mentioned above,
+- or use the xdg default clients installed on your system,
+- or both.
+
+Modern (Gnome, KDE,...) environments, will parse the `.desktop` files, in the `/etc/xdg/autostart` directory to launch default clients.
+One can use an external program like `dex` to parse those files. Add the following command in your `.xsession` file:
+
+`dex --autostart --environment <my_wm_name>`
+
+This will parse and execute the autostart files applying to your wm (e.g. probably anything that does not require Gnome or KDE).
+
+The command above will also parse `.desktop` files in `~/.config/xdg/autostart`. This can be used to leave only the `dex` invocation to the `.xession` file. Or even to get completely rid of the `.xsession` file if your WM can exec external commands at startup - like i3 for example.
+
+Reference: [i3 FAQ](https://faq.i3wm.org/question/2155/how-can-i-use-autostart-desktop-files-in-i3.1.html).
+
