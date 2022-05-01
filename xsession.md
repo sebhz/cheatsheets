@@ -1,5 +1,5 @@
 # Trying to understand Display managers in modern desktops
-Seems to work fine in Ubuntu 16.04, 18.04 and 20.04 (GDM3)
+Seems to work fine in Ubuntu 16.04, 18.04, 20.04 and 22.04 (GDM3)
 
 ## Login process
 
@@ -59,6 +59,8 @@ Type=Application
 ```
 
 The `Good old X session` should now be available in GDM login screen. Populate the clients in `~/.xsession` ending with the window manager.
+
+Possible issue with this in Ubuntu 22.04 - looks like X11 options are incorrectly set in `/etc/gdm3/Xsession`. Check "has_option" function in /etc/X11/Xsession.
 
 ##### Using a window manager or session manager
 This is the way the package managers of most distro do it. For example using `dwm` window manager.
