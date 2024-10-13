@@ -1,6 +1,7 @@
 # Trying to understand Display managers in modern desktops
 Seems to work fine in Ubuntu 16.04, 18.04, 20.04 and 22.04 (GDM3)
 
+# X
 ## Login process
 
 [Display manager](https://en.wikipedia.org/wiki/X_display_manager) (GDM, KDM, LightDM, XDM...):
@@ -90,4 +91,16 @@ This will parse and execute the autostart files applying to your wm (e.g. probab
 The command above will also parse `.desktop` files in `~/.config/xdg/autostart`. This can be used to leave only the `dex` invocation to the `.xession` file. Or even to get completely rid of the `.xsession` file if the WM can exec external commands at startup - like `i3` for example.
 
 Adding the `dex` command in a script in `/etc/X11/Xsession.d` will make the autostart files be executed twice in case a real session manager is used. Need to guard against this by checking the scripts argument.
+
+# Wayland
+
+## Login process
+```
+init -> getty/login (=display manager) -> shell -> wayland compositor (sway, mutter, dwl,...)
+```
+
+## Display manager configuration
+
+### GDM3
+Very similar to X. GDM3 looks for freedesktop session file in `/usr/share/wayland-sessions`. It seems it also looks first in `/usr/local/share/wayland-sessions`.
 
